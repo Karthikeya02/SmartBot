@@ -1,6 +1,7 @@
 import constants as keys
 from telegram.ext import *
 import responses as R
+from keep_alive import keep_alive
 
 print("Bot started...")
 
@@ -47,5 +48,6 @@ def main():
 
     updater.start_polling()
     updater.idle()
+    keep_alive()
 
 main()
