@@ -23,7 +23,7 @@ def sample_responses(input_text):
 
 
 def menu():
-    return ("Available Items:\n1. Apple: $5\n2. Grape: $3\n3. Orange: $3\n4. StrawBerry: $4\n5. Banana: $2\n\n Enter your order in the format: order\n[serial number of item] [quantity]\n[serial number of item] [quantity]\n...\n[serial number of item] [quantity]\n\nExample:\norder\n1 2\n2 1\n3 1\n\nThis will order 2 Apples, 1 Grape and 1 Orange.")
+    return ("Available Items:\n1. Apple: $5\n2. Grape: $3\n3. Orange: $3\n4. StrawBerry: $4\n5. Banana: $2\n6. Kiwi: $5\n7. Peach: $3\n8. Litchi: $3\n9. BluBerry: $4\n10. WaterMelon: $2\n Enter your order in the format: order\n[serial number of item] [quantity]\n[serial number of item] [quantity]\n...\n[serial number of item] [quantity]\n\nExample:\norder\n1 2\n2 1\n3 1\n\nThis will order 2 Apples, 1 Grape and 1 Orange.")
 
 def address(input_text):
     global addr
@@ -53,6 +53,21 @@ def order(input_text):
             amount += 4 * int(input_text[i].split()[1])
         elif input_text[i].split()[0] == "5":
             s += "Banana: " + input_text[i].split()[1] + "\n"
+            amount += 2 * int(input_text[i].split()[1])
+        elif input_text[i].split()[0] == "6":
+            s += "Kiwi: " + input_text[i].split()[1] + "\n"
+            amount += 5 * int(input_text[i].split()[1])
+        elif input_text[i].split()[0] == "7":
+            s += "Peach: " + input_text[i].split()[1] + "\n"
+            amount += 3 * int(input_text[i].split()[1])
+        elif input_text[i].split()[0] == "8":
+            s += "Litchi: " + input_text[i].split()[1] + "\n"
+            amount += 3 * int(input_text[i].split()[1])
+        elif input_text[i].split()[0] == "9":
+            s += "BluBerry: " + input_text[i].split()[1] + "\n"
+            amount += 4 * int(input_text[i].split()[1])
+        elif input_text[i].split()[0] == "10":
+            s += "WaterMelon: " + input_text[i].split()[1] + "\n"
             amount += 2 * int(input_text[i].split()[1])
     if addr == "":
         return "Enter your address first using. Enter 'address \n [your address]' to update your address"
