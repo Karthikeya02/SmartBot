@@ -1,2 +1,2 @@
-API_KEY = ' : '
-#Get This from @BotFather
+API_KEY = '5823845393:AAGP1r3peeXl6QMxk4OIU3Q_2VozShqLnXU'
+
